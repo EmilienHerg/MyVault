@@ -21,7 +21,7 @@ $secret_text = "texte secret !";
 $encrypted = Crypto::encrypt($secret_text, $key);
 echo $encrypted;
 
-// $decrypted = Crypto::decrypt($encrypted, $key);
-// echo $decrypted;
+$decrypted = Crypto::decrypt($encrypted, $key);
+echo $decrypted;
 
 
