@@ -34,7 +34,7 @@ class Security
     }
 
 
-    public function logout() {
+    public static function logout() {
         self::safeSessionStart();
         session_unset();
         session_destroy();
