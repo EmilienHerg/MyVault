@@ -2,7 +2,7 @@
     "name": "vendor/app",
     "autoload": {
         "psr-4": {
-            "Vendor\\App\\": "src/"
+            "App\\": "src/"
         }
     },
     "require": {
