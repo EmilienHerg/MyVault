@@ -13,22 +13,18 @@
     <div class="container">
         <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
             <div class="col-md-6 col-lg-5">
-
                 <div class="card shadow-lg border-0 rounded-3">
                     <div class="card-header bg-primary text-white text-center py-3">
                         <h4 class="mb-0">🔐 My Secure Vault</h4>
                         <small>Création de compte</small>
                     </div>
-
                     <div class="card-body p-4">
-
                         <?php if (isset($error)): ?>
                             <div class="alert alert-danger alert-dismissible fade show" role="alert">
                                 <strong>Erreur :</strong> <?= htmlspecialchars($error) ?>
                                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                             </div>
                         <?php endif; ?>
-
                         <?php if (isset($success)): ?>
                             <div class="alert alert-success" role="alert">
                                 <strong>Succès !</strong> <?= htmlspecialchars($success) ?>
@@ -42,7 +38,6 @@
                                     <label for="email" class="form-label">Adresse Email</label>
                                     <input type="email" class="form-control" id="email" name="email" placeholder="nom@exemple.com" required>
                                 </div>
-
                                 <div class="mb-3">
                                     <label for="password" class="form-label">Mot de passe</label>
                                     <input type="password" class="form-control" id="password" name="password" placeholder="Choisissez un mot de passe fort" required>
@@ -60,10 +55,8 @@
                                     <button type="submit" class="btn btn-primary btn-lg">S'inscrire</button>
                                 </div>
                             </form>
-
                         <?php endif; ?>
                     </div>
-
                     <div class="card-footer text-center py-3 bg-white">
                         <p class="mb-0">Déjà un compte ? <a href="/login" class="text-primary fw-bold text-decoration-none">Se connecter</a></p>
                     </div>
@@ -83,13 +76,11 @@
                 const password = this.value;
                 let strength = 0;
 
-                // 1. Calcul du score (0 à 4)
-                if (password.length >= 8) strength++; // Critère longueur
-                if (password.match(/[A-Z]/)) strength++; // Critère majuscule
-                if (password.match(/[0-9]/)) strength++; // Critère chiffre
-                if (password.match(/[^a-zA-Z0-9]/)) strength++; // Critère caractère spécial
+                if (password.length >= 8) strength++;
+                if (password.match(/[A-Z]/)) strength++;
+                if (password.match(/[0-9]/)) strength++;
+                if (password.match(/[^a-zA-Z0-9]/)) strength++;
 
-                // 2. Gestion de l'affichage (Couleur & Largeur & Texte)
                 let width = '0%';
                 let colorClass = '';
                 let message = '';

@@ -9,6 +9,7 @@ $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
 $dotenv->load();
 
 echo "<h1>Mon Coffre-Fort Sécurisé</h1>";
+echo $_ENV['DB_DATABASE'];
 
 // A DECOMMENTER SI PB AVEC LA BDD
 //
